@@ -1,4 +1,4 @@
-// compress: false, javascriptEnabled: true
+// compress: true, javascriptEnabled: true
 /* --------------------------------------------------------------
 /* MAIN LESS MIXINS AND FUNCTIONS - LESSHAT
 -------------------------------------------------------------- */
@@ -87,6 +87,14 @@ a {
     }
 }
 
+.social-widget-container {
+    font-size: 1.5rem;
+
+    & a {
+        margin: 0.4rem;
+    }
+}
+
 /* --------------------------------------------------------------
 1.- HEADER
 -------------------------------------------------------------- */
@@ -120,6 +128,75 @@ a {
 /* --------------------------------------------------------------
 2.- FOOTER
 -------------------------------------------------------------- */
+.the-footer {
+    background: @blue;
+    color: @white;
+    padding: 5rem 1rem;
+
+    & .footer-item {
+        font-size: .9rem;
+
+        & a {
+            color: @white;
+
+            &:hover {
+                color: @sgray;
+            }
+        }
+
+        & h6 {
+            font-size: .8rem;
+            margin: 0;
+        }
+
+        & .footer-sidebar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            & .menu {
+                list-style: none;
+                padding: 0;
+                .display(flex);
+                .align-items(center);
+                .justify-content(center);
+                flex-wrap: wrap;
+
+                & li {
+                    position: relative;
+
+                    &:after {
+                        content: '|';
+                        position: absolute;
+                        top: 0;
+                        right: -6px;
+                        font-size: 1.2rem;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    & a {
+                        padding: 0.3rem 0.5rem;
+                        font-size: .95rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    & #sidebar-footer2 {
+        text-align: center;
+    }
+
+    & #sidebar-footer3 {
+        text-align: right;
+    }
+}
 
 /* --------------------------------------------------------------
 3.- HOME

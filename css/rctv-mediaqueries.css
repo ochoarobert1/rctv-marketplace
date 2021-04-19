@@ -4,6 +4,12 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
 /* --------------------------------------------------------------
 MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
 -------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .the-footer #sidebar-footer2 {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+}
 /* --------------------------------------------------------------
 MEDIAQUERIES XS - LAYOUTS LESS THAN 767px
 -------------------------------------------------------------- */
@@ -15,5 +21,17 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 767px
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     padding: 0.8rem 0rem;
+  }
+  .the-footer .footer-item {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .the-footer #sidebar-footer3 {
+    text-align: center;
+  }
+}
+@media (max-width: 533px) {
+  .the-footer .footer-item .footer-sidebar .menu li:after {
+    display: none;
   }
 }

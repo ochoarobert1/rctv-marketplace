@@ -100,7 +100,7 @@ function rctv_widgets_init()
         'after_title'   => '</h2>',
     ));
 
-    register_sidebars(4, array(
+    register_sidebars(3, array(
         'name'          => __('Pie de Página %d', 'rctv'),
         'id'            => 'sidebar_footer',
         'description'   => __('Estos widgets seran vistos en el pie de página del sitio', 'rctv'),
@@ -150,7 +150,39 @@ if (function_exists('add_theme_support')) {
 }
 if (function_exists('add_image_size')) {
     add_image_size('avatar', 100, 100, true);
-    add_image_size('logo', 200, 150, false);
+    add_image_size('logo', 170, 130, false);
     add_image_size('blog_img', 276, 217, true);
     add_image_size('single_img', 636, 297, true);
+}
+
+/* --------------------------------------------------------------
+    SOCIAL NETWORK SHORTCODE
+-------------------------------------------------------------- */
+
+add_shortcode('rctv_social_networks', 'rctv_social_networks_callback');
+function rctv_social_networks_callback()
+{
+    ob_start();
+?>
+    <?php $social_settings = get_option('rctv_social_settings'); ?>
+    <div class="social-widget-container">
+        <?php if ($social_settings['instagram'] != '') { ?>
+            <a href="<?php echo $social_settings['instagram']; ?>" title="<?php _e('Visita nuestro perfil en Instagram', 'yam'); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+        <?php } ?>
+        <?php if ($social_settings['facebook'] != '') { ?>
+            <a href="<?php echo $social_settings['facebook']; ?>" title="<?php _e('Visita nuestro perfil en Facebook', 'yam'); ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
+        <?php } ?>
+        <?php if ($social_settings['twitter'] != '') { ?>
+            <a href="<?php echo $social_settings['twitter']; ?>" title="<?php _e('Visita nuestro perfil en Twitter', 'yam'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+        <?php } ?>
+        <?php if ($social_settings['linkedin'] != '') { ?>
+            <a href="<?php echo $social_settings['linkedin']; ?>" title="<?php _e('Visita nuestro perfil en LinkedIn', 'yam'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <?php } ?>
+        <?php if ($social_settings['youtube'] != '') { ?>
+            <a href="<?php echo $social_settings['youtube']; ?>" title="<?php _e('Visita nuestro perfil en Instagram', 'yam'); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a>
+        <?php } ?>
+    </div>
+    <?php
+    $content = ob_get_clean();
+    return $content;
 }
