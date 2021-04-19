@@ -82,12 +82,18 @@ a:hover {
   background: #00295E;
   padding: 0.5rem;
 }
-.the-header .navbar-nav .nav-item .nav-link {
+.the-header .navbar .navbar-toggler {
+  border: 0 !important;
+}
+.the-header .navbar .navbar-nav .nav-item .nav-link {
   text-transform: uppercase;
   font-weight: 300;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 1.5px;
+}
+.the-header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #cecece;
 }
 /* --------------------------------------------------------------
 2.- FOOTER

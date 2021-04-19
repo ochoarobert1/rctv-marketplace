@@ -38,7 +38,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="the-navbar col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <nav class="navbar navbar-expand-md" role="navigation">
+                            <nav class="navbar navbar-dark navbar-expand-md" role="navigation">
                                 <a class="navbar-brand" href="<?php echo home_url('/'); ?>" title="<?php echo get_bloginfo('name'); ?>">
                                     <?php $custom_logo_id = get_theme_mod('custom_logo'); ?>
                                     <?php $image = wp_get_attachment_image_src($custom_logo_id, 'logo'); ?>

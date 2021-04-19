@@ -11,6 +11,7 @@ VARIABLES
 @secondfont: 'Open Sans', sans-serif;
 @black: #000000;
 @white: #ffffff;
+@sgray: #cecece;
 @blue: #00295E;
 
 /* --------------------------------------------------------------
@@ -76,12 +77,15 @@ a {
 }
 
 @media (min-width: 1200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
         max-width: 1200px;
     }
 }
-
-
 
 /* --------------------------------------------------------------
 1.- HEADER
@@ -90,19 +94,28 @@ a {
     background: @blue;
     padding: .5rem;
 
-    & .navbar-nav {
-        & .nav-item {
-            & .nav-link {
-                text-transform: uppercase;
-                font-weight: 300;
-                color: @white;
-                font-size: .95rem;
-    letter-spacing: 1.5px;
+    & .navbar {
+        & .navbar-toggler {
+            border: 0 !important;
+        }
+
+        & .navbar-nav {
+            & .nav-item {
+                & .nav-link {
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    color: @white;
+                    font-size: 1rem;
+                    letter-spacing: 1.5px;
+
+                    &:hover {
+                        color: @sgray;
+                    }
+                }
             }
         }
     }
 }
-
 
 /* --------------------------------------------------------------
 2.- FOOTER
