@@ -175,9 +175,6 @@ function rctv_social_networks_callback()
         <?php if ($social_settings['twitter'] != '') { ?>
             <a href="<?php echo $social_settings['twitter']; ?>" title="<?php _e('Visita nuestro perfil en Twitter', 'yam'); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
         <?php } ?>
-        <?php if ($social_settings['linkedin'] != '') { ?>
-            <a href="<?php echo $social_settings['linkedin']; ?>" title="<?php _e('Visita nuestro perfil en LinkedIn', 'yam'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <?php } ?>
         <?php if ($social_settings['youtube'] != '') { ?>
             <a href="<?php echo $social_settings['youtube']; ?>" title="<?php _e('Visita nuestro perfil en Instagram', 'yam'); ?>" target="_blank"><i class="fa fa-youtube-play"></i></a>
         <?php } ?>

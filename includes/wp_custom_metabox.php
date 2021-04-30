@@ -125,3 +125,5 @@ class customCMB2Class
 
 // Initialize class
 new customCMB2Class;
+
+require_once('class-metaboxes-product.php');
